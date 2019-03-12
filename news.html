@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100"></canvas>
+<script>
+    let Hcn = function (chieu_dai,chieu_rong) {
+        this.chieu_dai = chieu_dai ;
+        this.chieu_rong = chieu_rong;
+        this.dien_tich = function () {
+            return this.chieu_dai * this.chieu_rong;
+        };
+         this.chu_vi =function () {
+             return (this.chieu_rong + this.chieu_dai)*2
+         }
+        }
+
+    let x=new Hcn(300,150);
+    alert("chieu dai la: " +x.chieu_dai);
+    alert("chieu rong la: " + x.chieu_rong);
+    alert("chu vi la: " + x.chu_vi());
+    alert("dien tich la: " + x.dien_tich());
+    let ctx = document.getElementById("myCanvas").getContext("2d");
+
+
+    ctx.stroke();
+    ctx.fillStyle = "#340000";
+    ctx.fillRect(0,0,300,150);
+
+    
+</script>
+</body>
+</html>
